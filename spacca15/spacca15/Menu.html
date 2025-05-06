@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menù Principale - Spacca15</title>
+  <style>
+    /* Stile generale per il corpo */
+    body {
+      background: rgb(86, 175, 212); /* Colore di sfondo */
+      border: 1px solid rgb(11, 231, 147); /* Bordo */
+      font-family: 'Segoe UI', sans-serif; /* Font principale */
+      display: flex; /* Centra il contenuto */
+      justify-content: center; /* Centra orizzontalmente */
+      align-items: center; /* Centra verticalmente */
+      height: 100vh; /* Altezza dell'intera finestra */
+      color: #ffffff; /* Colore del testo */
+    }
+
+    /* Stile per il contenitore del menu */
+    .menu-container {
+      text-align: center; /* Centra il testo */
+      background-color: #0920f1; /* Sfondo semi-trasparente */
+      padding: 40px; /* Spaziatura interna */
+      border-radius: 20px; /* Angoli arrotondati */
+      box-shadow: 0 0 15px rgba(0,0,0,0.4); /* Ombreggiatura */
+    }
+
+    /* Stile per il titolo */
+    h1 {
+      margin-bottom: 40px; /* Spaziatura sotto il titolo */
+      font-size: 3em; /* Dimensione del font */
+    }
+
+    /* Stile per i pulsanti del menu */
+    .menu-button {
+      display: block; /* Ogni pulsante occupa una riga */
+      width: 200px; /* Larghezza del pulsante */
+      padding: 15px; /* Spaziatura interna */
+      margin: 15px auto; /* Spaziatura esterna e centratura */
+      font-size: 1.2em; /* Dimensione del testo */
+      border-radius: 10px; /* Angoli arrotondati */
+      background-color: rgb(86, 175, 212); /* Colore di sfondo */
+      color: white; /* Colore del testo */
+      cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+      transition: background-color 0.3s ease; /* Transizione per il cambio colore */
+    }
+
+    /* Stile per il pulsante al passaggio del mouse */
+    .menu-button:hover {
+      background-color: #0920f1; /* Cambia colore quando il mouse è sopra */
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <h1>Spacca 15</h1> <!-- Titolo del gioco -->
+    <button class="menu-button" onclick="inizio_gioco()">Gioca</button> <!-- Pulsante per iniziare il gioco -->
+    <button class="menu-button" onclick="mostra_regole()">Regole del gioco</button> <!-- Pulsante per mostrare le regole -->
+  </div>
+
+  <script>
+    // Funzione per iniziare il gioco
+    function inizio_gioco() {
+      window.location.href = 'gioco.html'; // Reindirizza alla pagina di gioco
+    }
+
+    // Funzione per mostrare le regole del gioco
+    function mostra_regole() {
+      alert("Regole del gioco:\n\n" + // Mostra un messaggio con le regole
+            "1. Il gioco consiste nel riordinare le tessere numerate da 1 a 15.\n" +
+            "2. Le tessere possono essere spostate solo nello spazio vuoto adiacente.\n" +
+            "3. L'obiettivo è ordinare le tessere in modo che siano disposte in ordine crescente, con lo spazio vuoto alla fine.\n" +
+            "4. Buon divertimento!");
+    }
+  </script>
+</body>
+</html>
